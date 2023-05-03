@@ -1,9 +1,10 @@
 package com.wordscramble.words.models;
 
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 @Embeddable
-public class AciertoId {
+public class AciertoId implements Serializable {
     private static final int serialVersionUID = 1;
 
     //especifica que la entidad acierto hace uso de una PK compuesta
