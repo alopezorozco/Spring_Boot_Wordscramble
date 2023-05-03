@@ -1,6 +1,7 @@
 package com.wordscramble.words.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "palabra")
@@ -24,6 +25,9 @@ public class Palabra {
     @ManyToOne
     @JoinColumn(name="asigid")
     private Asignatura asignatura;
+
+    @OneToMany(mappedBy = "palabra")
+    private List<Acierto> aciertos = new ArrayList<>();
 
     //constructores
     public Palabra() {
