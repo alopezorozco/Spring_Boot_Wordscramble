@@ -101,9 +101,6 @@ public class Palabra {
     public void setAsignatura(Asignatura asignatura) {
         this.asignatura = asignatura;
     }
-
-    public String toString(){
-        return this.palabraAAdivinar;
-    }
+    
 }
 
