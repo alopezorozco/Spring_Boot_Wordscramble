@@ -21,7 +21,7 @@ public class AsignaturaController implements AsignaturaDao{
      * Retorna la lista de asignaturas
      * @return
      */
-    @RequestMapping(value = "asignatura", method= RequestMethod.GET)
+    @RequestMapping(value = "asignatura", method= RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public List<Asignatura> getAsignaturas(){
         return asignaturaDao.getAsignaturas();
     }

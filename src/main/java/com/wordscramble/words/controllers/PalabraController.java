@@ -18,7 +18,7 @@ public class PalabraController implements PalabraDao {
     private PalabraDao palabraDao;
 
     @Override
-    @RequestMapping(value="palabra-a-adivinar/{idAsignatura}")
+    @RequestMapping(value="palabra-a-adivinar/{idAsignatura}", produces = "application/json;charset=UTF-8")
     public List<Palabra> obtenerPalabraAAdivinar(@PathVariable int idAsignatura) {
         return palabraDao.obtenerPalabraAAdivinar(idAsignatura);
     }//find el método obtenerPalabraAAdivinar
