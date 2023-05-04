@@ -26,8 +26,8 @@ public class PalabraDaoImp implements PalabraDao {
         //consulta HQL para obtener todas las palabras que no han sido adivinadas
         //por el usuario y que pertenezcan a la asignatura pasada como parámetro
         String hql = "SELECT p " +
-                "FROM acierto a RIGHT JOIN a.palabra p " +
-                "WHERE p.asignagura.id = : asignaturaId AND a.aciertoId.palId IS NULL";
+                "FROM Acierto a RIGHT JOIN a.palabra p " +
+                "WHERE p.asignatura.id = : asignaturaId AND a.palabra IS NULL";
 
         //ejetucamos la consulta y le pasamos el parámetro correspondiente
         Query query = entityManager.createQuery(hql);
